@@ -1,7 +1,7 @@
 (function (angular) {
   'use strict';
   angular.module('stars', [
-    'ui.router'
+    'ui.router',
  ,'stars.main'])
   .config(function ($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/stars/main');

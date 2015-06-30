@@ -3,8 +3,8 @@
   "version": "",
   "dependencies": {
     "bootstrap-css-only": "*",
-    "angular": "*" ,
-    "angular-ui-router": "*"
+    "angular": "*",
+    "angular-ui-router": "*",
+    "ngDialog": "~0.4.0"
   }
 }
-

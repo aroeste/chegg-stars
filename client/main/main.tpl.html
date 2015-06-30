@@ -1,6 +1,6 @@
 <!-- nav bar for entire app -->
 <header>
-  <nav class='' role='navigation'>
+  <nav id='auth-header' role='navigation'>
     <div>
       <p>alberto@chegg.com &#8226; <a href='#'>Logout</a></p>
     </div>
@@ -8,22 +8,42 @@
 </header>
 
 <form id="star-form" novalidate>
-  <input id="select-user" ng-model="recipient" placeholder="Person to award"></input>
-  <button id="select-star" name="select-star" ng-click="openStarsModal()">Select Star</button>
-  <textarea id="star-explanation" placeholder="Why do they deserver a star?" ng-model="starExplanation"></textarea>
+  <angucomplete id="select-recipient"
+                placeholder="Who would you like to send a star to?"
+                pause="100"
+                selectedobject="recipient"
+                localdata="employees"
+                searchfields="name"
+                titlefield="name"
+                minlength="2"
+                inputclass="form-control form-control-small"></angucomplete>
+  <button ng-click="openStarsModal()"><img src="{{starSrc}}" id="select-star" name="select-star" alt="Select star">Select star</button>
+  <p></p>
+  <p></p>
+  <textarea id="star-explanation" placeholder="Leave a comment..." ng-model="starExplanation"></textarea>
   <button name="submit-star" ng-click="submitStar()">Submit Star</button>
 </form>
 
 <section>
-  <div ng-repeat="star in stars | orderBy: 'timeStamp'">
+  <div ng-repeat="star in stars | orderBy: 'timeStamp': true">
     <img src="{{star.src}}" class="star" />
-    <span class="date-awarded">{{star.timeStamp | date}}</span>
-    <span class="recipient"><strong>{{star.recipient}}</strong></span> received a star from <span class="awarder"><strong>{{star.awarder}}</strong></span>
+    <span class="date-awarded">{{star.timeStamp | date: "MMM d, y 'at' h:mm a"}}</span>
+    <span class="recipient"><strong>{{star.recipient.originalObject.name}}</strong></span> received a star from <span class="awarder"><strong>{{star.awarder}}</strong></span>
     <p class="star-testimonial">{{star.testimonial}}</p>
     <span class="star-likes"><a href="#">Kate Brena, Matthew Chotin, and Claire Hubbard likes this</a>
     <div>
       <span class="commenter"><em>Kate Brena:</em></span> <span class="comment-text">"Good work!"</span>
     </div>
   </div>
-</section>
 
+  <div>
+    <img src="../assets/img/standard.png" class="star" />
+    <span class="date-awarded">Jun 30, 2015 at 4:27 PM</span>
+    <span class="recipient"><strong>Liam Dorpalen-Barry</strong></span> received a star from <span class="awarder"><strong>Stewart McCoy</strong></span>
+    <p class="star-testimonial">Your thinking on how to prototype the Chegg Stars app was a major contribution toward allowing our team to efficiently put together an impressive prototype for Demo Day! And your pair programming ensured we got the job down in record time! You rock :)</p>
+    <span class="star-likes"><a href="#">Kate Brena, Matthew Chotin, and Claire Hubbard likes this</a>
+    <div>
+      <span class="commenter"><em>Nancy Qian:</em></span> <span class="comment-text">"Awesome work Liam!"</span>
+    </div>
+  </div>
+</section>
