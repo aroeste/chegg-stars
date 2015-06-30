@@ -1,0 +1,29 @@
+<!-- nav bar for entire app -->
+<header>
+  <nav class='' role='navigation'>
+    <div>
+      <p>alberto@chegg.com &#8226; <a href='#'>Logout</a></p>
+    </div>
+  </nav>
+</header>
+
+<form id="star-form" novalidate>
+  <input id="select-user" ng-model="recipient" placeholder="Person to award"></input>
+  <button id="select-star" name="select-star" ng-click="openStarsModal()">Select Star</button>
+  <textarea id="star-explanation" placeholder="Why do they deserver a star?" ng-model="starExplanation"></textarea>
+  <button name="submit-star" ng-click="submitStar()">Submit Star</button>
+</form>
+
+<section>
+  <div ng-repeat="star in stars | orderBy: 'timeStamp'">
+    <img src="{{star.src}}" class="star" />
+    <span class="date-awarded">{{star.timeStamp | date}}</span>
+    <span class="recipient"><strong>{{star.recipient}}</strong></span> received a star from <span class="awarder"><strong>{{star.awarder}}</strong></span>
+    <p class="star-testimonial">{{star.testimonial}}</p>
+    <span class="star-likes"><a href="#">Kate Brena, Matthew Chotin, and Claire Hubbard likes this</a>
+    <div>
+      <span class="commenter"><em>Kate Brena:</em></span> <span class="comment-text">"Good work!"</span>
+    </div>
+  </div>
+</section>
+
