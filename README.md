@@ -6,8 +6,8 @@ Give gold stars to your teammates for a job well done! Bringing Chegg together t
 
 ## App screenshot
 
-![alt tag](https://raw.github.com/starsapp/cheggstars/master/client/assets/image/app-screenshot.png)
+![alt tag](https://github.com/starsapp/chegg-stars/blob/master/client/assets/img/app-screenshot.png)
 
 ## Stars illustrations
 
-![alt tag](https://raw.github.com/starsapp/cheggstars/master/client/assets/image/app-screenshot-illustrations.png)
+![alt tag](https://github.com/starsapp/chegg-stars/blob/master/client/assets/img/app-screenshot-illustrations.png)
