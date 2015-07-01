@@ -39,7 +39,7 @@
       $scope.stars.push(newStar);
 
 
-      $scope.starSrc = "../assets/img/standard.png";
+      $scope.starSrc = "../assets/img/img-star.png";
       $scope.starExplanation = '';
       $scope.recipientObject = {}; //TODO - this is not clearing the name autocomplete field upon submission
     };
@@ -51,7 +51,7 @@
       });
     };
 
-    $scope.starSrc = '../assets/img/standard.png';
+    $scope.starSrc = '../assets/img/img-star.png';
 
     $scope.selectStar = function (path) {
       $scope.starSrc = "../assets/img/" + path;
