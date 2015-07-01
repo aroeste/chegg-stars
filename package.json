@@ -22,5 +22,8 @@
     "gulp-concat": "*",
     "gulp-uglify": "*",
     "gulp-less": "*"
+  },
+  "scripts": {
+    "start": "node client/main/main.js"
   }
 }
