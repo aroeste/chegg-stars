@@ -20,13 +20,13 @@
                       inputclass="form-control form-control-small"
                       ng-click="userInside()"></angucomplete>
         <button class="select-star-type" ng-click="openStarsModal()"><img src="{{starSrc}}" id="select-star" name="select-star" alt="Select star">Select star</button>
-      <textarea id="star-explanation" placeholder="Leave a comment..." ng-model="starExplanation" ng-show="{{showExplanation}}"></textarea>
-      <button name="submit-star" ng-click="submitStar()" ng-show="{{showExplanation}}">Submit Star</button>
+      <textarea id="star-explanation" placeholder="Leave a comment..." ng-model="starExplanation"></textarea>
+      <button name="submit-star" ng-click="submitStar()">Submit Star</button>
     </form>
 
   <section class="star-feed">
     <div class="star-feed-item" ng-repeat="star in stars | orderBy: 'timeStamp': true">
-      <img src="{{star.src}}" class="star" />
+      <img src="{{star.src}}" class="star-type" />
       <span class="date-awarded">{{star.timeStamp | date: "MMM d, y 'at' h:mm a"}}</span>
       <span class="recipient"><strong>{{star.recipient}}</strong></span> received a star from <span class="awarder"><strong>{{star.awarder}}</strong></span>
       <p class="star-testimonial">{{star.testimonial}}</p>

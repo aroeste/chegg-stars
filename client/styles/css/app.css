@@ -38,6 +38,9 @@ body {
   margin-bottom: 40px;
   padding: 40px;
 }
+.app-container .star-feed .star-feed-item .star-type {
+  width: 62px;
+}
 #auth-header {
   background-color: #f07d00;
   height: 60px;

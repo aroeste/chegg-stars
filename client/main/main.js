@@ -13,7 +13,7 @@
     var stars = [{
       awarder: "Stewart McCoy",
       recipient: "Liam Dorpalen-Barry",
-      src: "../assets/img/standard.png",
+      src: "../assets/img/img-star.png",
       testimonial: "Liam did a great job organizing the technical aspects of the Chegg Stars Hackathon project! Thanks Liam!",
       timeStamp: Date.now(),
     }];
@@ -36,7 +36,6 @@
       newStar.awarder = "Alberto Aroeste";
       newStar.testimonial = $scope.starExplanation;
       newStar.timeStamp = Date.now();
-      console.log(newStar)
       $scope.stars.push(newStar);
 
 
