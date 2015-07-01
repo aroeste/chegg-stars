@@ -11,10 +11,10 @@
   })
   .controller('Main.controller', ['$scope', 'ngDialog', 'Employees', function($scope, ngDialog, Employees) {
     var stars = [{
-      awarder: "Stewart McCoy",
-      recipient: "Liam Dorpalen-Barry",
-      src: "../assets/img/img-star.png",
-      testimonial: "Liam did a great job organizing the technical aspects of the Chegg Stars Hackathon project! Thanks Liam!",
+      awarder: "Alberto Aroeste",
+      recipient: "Yun Chi",
+      src: "../assets/img/goldstar.png",
+      testimonial: "Yun did an AMAZING job on the illustrations for Chegg Stars! Just, wow.",
       timeStamp: Date.now(),
     }];
 
@@ -39,7 +39,7 @@
       $scope.stars.push(newStar);
 
 
-      $scope.starSrc = "../assets/img/img-star.png";
+      $scope.starSrc = "../assets/img/star.png";
       $scope.starExplanation = '';
       $scope.recipientObject = {}; //TODO - this is not clearing the name autocomplete field upon submission
     };
@@ -51,7 +51,7 @@
       });
     };
 
-    $scope.starSrc = '../assets/img/img-star.png';
+    $scope.starSrc = '../assets/img/star.png';
 
     $scope.selectStar = function (path) {
       $scope.starSrc = "../assets/img/" + path;

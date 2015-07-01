@@ -10,7 +10,7 @@
 
 <section class="app-container">
     <form id="star-form" novalidate>
-        <button class="select-star-type" ng-click="openStarsModal()"><img src="{{starSrc}}" id="select-star-icon" name="select-star" /></button>
+        <button class="select-star-type" ng-click="openStarsModal()"><img src="{{starSrc}}" id="select-star-icon" name="select-star" />Select star</button>
         <angucomplete id="select-recipient"
                       placeholder="Who would you like to send a star to?"
                       pause="100"
@@ -38,13 +38,15 @@
     </div>
 
     <div class="star-feed-item">
-      <img src="../assets/img/img-star.png" class="star-type" />
+      <img src="../assets/img/shippingstar.png" class="star-type" />
       <div class="star-contents">
         <span class="date-awarded">Jun 30, 2015 at 4:27 PM</span>
         <div class="recipient"><strong>Liam Dorpalen-Barry</strong></span> received a star from <span class="awarder"><strong>Stewart McCoy</strong></div>
         <p class="star-testimonial">Your thinking on how to prototype the Chegg Stars app was a major contribution toward allowing our team to efficiently put together an impressive prototype for Demo Day! And your pair programming ensured we got the job down in record time! You rock :)</p>
-        <span class="star-likes"><a href="#">Kate Brena, Matthew Chotin, and Claire Hubbard likes this</a>
-        <div>
+        <div class="like"><a href="#">Like</a> &#8226; <span class="comment"><a href="#">Comment</a></div>
+        <div class="star-likes">Kate Brena, Matthew Chotin, and Claire Hubbard liked this</div>
+        <h3>1 Comment</h3>
+        <div class="star-comments">
           <span class="commenter"><em>Nancy Qian:</em></span> <span class="comment-text">"Awesome work Liam!"</span>
         </div>
       </div>
