@@ -25,7 +25,11 @@
     $scope.showExplanation = false;
 
     $scope.userInside = function () {
-      $scope.showExplanation = true;
+      document.getElementById('select-recipient_value').setAttribute("autofocus", "autofocus");
+
+      $scope.showExplanation = function () {
+        return true;
+      };
     };
 
     $scope.submitStar = function() {

@@ -9,7 +9,10 @@
 </header>
 
 <section class="app-container">
-    <form id="star-form" novalidate>
+    <form id="recipient-placeholder" ng-hide="showExplanation">
+      <input id="recipient-placeholder-input" class="form-control" placeholder="Who would you like to send a star to?" ng-click="userInside()">
+    </form>
+    <form id="star-form" novalidate ng-show="showExplanation">
         <button class="select-star-type" ng-click="openStarsModal()"><img src="{{starSrc}}" id="select-star-icon" name="select-star" />Select star</button>
         <angucomplete id="select-recipient"
                       placeholder="Who would you like to send a star to?"
@@ -20,7 +23,8 @@
                       titlefield="name"
                       minlength="2"
                       inputclass="form-control form-control-small"
-                      ng-click="userInside()"></angucomplete>
+                      ng-click="userInside()"
+                      autofocus="autofocus"></angucomplete>
       <textarea id="star-explanation" class="form-control" placeholder="Leave a comment..." ng-model="starExplanation"></textarea>
       <button name="submit-star" ng-click="submitStar()">Submit Star</button>
     </form>

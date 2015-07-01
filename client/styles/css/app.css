@@ -18,6 +18,22 @@ button:focus {
 .app-container {
   margin-top: 80px;
 }
+.app-container #recipient-placeholder {
+  background-color: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 0 auto;
+  width: 1020px;
+}
+.app-container #recipient-placeholder #recipient-placeholder-input {
+  height: 42px;
+  line-height: .9em;
+  width: 1005px;
+}
+.app-container #recipient-placeholder #recipient-placeholder-input::-webkit-input-placeholder {
+  font-size: 17px;
+}
 .app-container #star-form {
   background-color: #fff;
   border: 1px solid #e5e5e5;
