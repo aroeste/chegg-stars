@@ -38,10 +38,9 @@
       newStar.timeStamp = Date.now();
       $scope.stars.push(newStar);
 
-
       $scope.starSrc = "../assets/img/star.png";
       $scope.starExplanation = '';
-      $scope.recipientObject = {}; //TODO - this is not clearing the name autocomplete field upon submission
+      document.getElementById('select-recipient_value').value = '';
     };
 
     $scope.openStarsModal = function () {
