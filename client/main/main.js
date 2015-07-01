@@ -22,20 +22,27 @@
 
     $scope.stars = stars;
 
+    $scope.showExplanation = false;
+
+    $scope.userInside = function () {
+      $scope.showExplanation = true;
+    };
+
     $scope.submitStar = function() {
+
       var newStar = {};
-      newStar.recipient = $scope.recipient;
+      newStar.recipient = $scope.recipientObject.title;
       newStar.src = $scope.starSrc;
       newStar.awarder = "Alberto Aroeste";
       newStar.testimonial = $scope.starExplanation;
       newStar.timeStamp = Date.now();
-      console.log(newStar.recipient);
+      console.log(newStar)
       $scope.stars.push(newStar);
 
-      newStar.recipient = '';
-      newStar.src = "../assets/img/standard.png";
-      newStar.testimonial = '';
-      newStar.timeStamp = '';
+
+      $scope.starSrc = "../assets/img/standard.png";
+      $scope.starExplanation = '';
+      $scope.recipientObject = {}; //TODO - this is not clearing the name autocomplete field upon submission
     };
 
     $scope.openStarsModal = function () {
